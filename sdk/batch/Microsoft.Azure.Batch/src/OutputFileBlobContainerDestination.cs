@@ -14,11 +14,13 @@ namespace Microsoft.Azure.Batch
         /// <param name='containerUrl'>The URL of the container within Azure Blob Storage to which to upload the file(s).</param>
         /// <param name='identityReference'>The reference to the user assigned identity to use to access Azure Blob Storage specified by containerUrl</param>
         /// <param name='path'>The destination blob or virtual directory within the Azure Storage container to which to upload the file(s).</param>
+        /// <param name='uploadHeaders'>A list of name-value pairs for headers to be used in uploading output files.</param>
         public OutputFileBlobContainerDestination(
             string containerUrl,
             ComputeNodeIdentityReference identityReference,
-            string path = default(string))
-            : this(containerUrl, path)
+            string path = default(string),
+            IList<HttpHeader> uploadHeaders = default(IList<HttpHeader>))
+            : this(containerUrl, path, uploadHeaders)
         {
             IdentityReference = identityReference;
         }
