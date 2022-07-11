@@ -371,7 +371,7 @@ namespace Azure.Communication.PhoneNumbers
         /// <param name="administrativeDivision"> The name of the state or province in which to search for the area code. e.g. California. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="countryCode"/> is null. </exception>
-        public virtual AsyncPageable<AreaCodeResult> ListAreaCodesAsync(string countryCode, int? skip = null, int? maxPageSize = null, PhoneNumberType? phoneNumberType = null, AssignmentType? assignmentType = null, string locality = null, string administrativeDivision = null, CancellationToken cancellationToken = default)
+        public virtual AsyncPageable<AreaCodeResult> ListAreaCodesAsync(string countryCode, int? skip = null, int? maxPageSize = null, PhoneNumberType? phoneNumberType = null, PhoneNumberAssignmentType? assignmentType = null, string locality = null, string administrativeDivision = null, CancellationToken cancellationToken = default)
         {
             if (countryCode == null)
             {
@@ -421,7 +421,7 @@ namespace Azure.Communication.PhoneNumbers
         /// <param name="administrativeDivision"> The name of the state or province in which to search for the area code. e.g. California. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="countryCode"/> is null. </exception>
-        public virtual Pageable<AreaCodeResult> ListAreaCodes(string countryCode, int? skip = null, int? maxPageSize = null, PhoneNumberType? phoneNumberType = null, AssignmentType? assignmentType = null, string locality = null, string administrativeDivision = null, CancellationToken cancellationToken = default)
+        public virtual Pageable<AreaCodeResult> ListAreaCodes(string countryCode, int? skip = null, int? maxPageSize = null, PhoneNumberType? phoneNumberType = null, PhoneNumberAssignmentType? assignmentType = null, string locality = null, string administrativeDivision = null, CancellationToken cancellationToken = default)
         {
             if (countryCode == null)
             {
@@ -469,7 +469,7 @@ namespace Azure.Communication.PhoneNumbers
         /// <param name="maxPageSize"> An optional parameter for how many entries to return, for pagination purposes. The default value is 100. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="countryCode"/> is null. </exception>
-        public virtual AsyncPageable<PhoneNumberOffering> ListOfferingsAsync(string countryCode, PhoneNumberType? phoneNumberType = null, AssignmentType? assignmentType = null, int? skip = null, int? maxPageSize = null, CancellationToken cancellationToken = default)
+        public virtual AsyncPageable<PhoneNumberOffering> ListOfferingsAsync(string countryCode, PhoneNumberType? phoneNumberType = null, PhoneNumberAssignmentType? assignmentType = null, int? skip = null, int? maxPageSize = null, CancellationToken cancellationToken = default)
         {
             if (countryCode == null)
             {
@@ -517,7 +517,7 @@ namespace Azure.Communication.PhoneNumbers
         /// <param name="maxPageSize"> An optional parameter for how many entries to return, for pagination purposes. The default value is 100. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="countryCode"/> is null. </exception>
-        public virtual Pageable<PhoneNumberOffering> ListOfferings(string countryCode, PhoneNumberType? phoneNumberType = null, AssignmentType? assignmentType = null, int? skip = null, int? maxPageSize = null, CancellationToken cancellationToken = default)
+        public virtual Pageable<PhoneNumberOffering> ListOfferings(string countryCode, PhoneNumberType? phoneNumberType = null, PhoneNumberAssignmentType? assignmentType = null, int? skip = null, int? maxPageSize = null, CancellationToken cancellationToken = default)
         {
             if (countryCode == null)
             {
